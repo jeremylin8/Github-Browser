@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+/* Variables */
+:root {
+  --blue-color: #1789fc;
+  --background-color: #edf2f4;
+  --white-color: #fff;
+  --dark-color: #1b1b1b;
+  --lightDark-color: #4a4a4a;
+  --lightGray-color: #eee;
+}
+/***************************
+BASE STYLES
+****************************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%; /* 1rem = 10px */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 56.25%; /* 1rem = 9px */
+  }
+}
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 50%; /* 1rem = 8px */
+  }
+}
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 75%; /* 1rem = 12px */
   }
 }
 
-.App-header {
-  background-color: #282c34;
+body {
+  font-family: sans-serif;
+  color: var(--lightDark-color);
+}
+
+/***************************
+NAVBAR STYLES
+****************************/
+
+.navbar {
+  padding: 2rem 4rem;
+  background-color: black;
+}
+
+.brand-link {
+  text-decoration: none;
+}
+
+.brand-text {
+  color: var(--blue-color);
+  font-size: 2.4rem;
+}
+
+.landing {
+  background-color: var(--background-color);
+  background-size: cover;
   min-height: 100vh;
+}
+
+.search__form {
+  padding: 3rem 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form-input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1.5rem 2rem;
+  width: 35rem;
+  border: 1px solid gray;
+  border-radius: 0.4rem 0 0 0.4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-blue {
+  width: 12rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--white-color);
+  background: var(--blue-color);
+  border: none;
+  cursor: pointer;
+  border-radius: 0 0.4rem 0.4rem 0;
+}
+
+/***************************
+REPOCARD STYLES
+****************************/
+
+.repos-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+
+.repoCard {
+  padding: 1rem;
+  background-color: var(--white-color);
+  margin: 0 2rem 2rem 0;
+  border: 1px solid var(--lightGray-color);
+  width: 30rem;
+}
+
+.repoCard__name {
+  font-weight: 500;
+  font-size: 1.6rem;
+  padding-bottom: 2rem;
+}
+
+.repoCard__desp {
+  padding-bottom: 2rem;
+}
+
+.languages {
+  padding-bottom: 1rem;
+}
+
+.star {
+  padding-right: 1rem;
+}
+
+.star-count {
+  padding-left: 1rem;
+}
+
+.repo-link {
+  text-decoration: none;
+  color: var(--blue-color);
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.error-message {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.repoDetails {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
